@@ -1,5 +1,8 @@
 # Things I learned in PHP while learning Laravel
 
+1. [Know which classes implement a particular interface](#getting-to-know-which-classes-implement-a-particular-instance)
+2. [Dynamically instantiating a class](#dynamically-instantiating-a-class)
+
 ## Getting to know which classes implement a particular interface
 
 ```php
@@ -10,7 +13,7 @@ foreach (get_declared_classes() as $className) {
 }
 ```
 
-## Dynamically instantiating a class (namespacing properly)
+## Dynamically instantiating a class
 
 1. Normal loading as we all know
 
