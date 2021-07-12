@@ -2,6 +2,7 @@
 
 1. [Know which classes implement a particular interface](#getting-to-know-which-classes-implement-a-particular-instance)
 2. [Dynamically instantiating a class](#dynamically-instantiating-a-class)
+3. [Laravel .htaccess](#laravel-.htaccess)
 
 ## Getting to know which classes implement a particular interface
 
@@ -76,4 +77,27 @@ class VehicleFactory
   return new $className();
   }
 }
+```
+
+## Laravel .htaccess
+
+```
+<IfModule mod_rewrite.c>
+<IfModule mod_negotiation.c>
+    Options -MultiViews
+</IfModule>
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ ^$1 [N]
+
+RewriteCond %{REQUEST_URI} (\.\w+$) [NC]
+RewriteRule ^(.*)$ public/$1
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ server.php
+</IfModule>
 ```
