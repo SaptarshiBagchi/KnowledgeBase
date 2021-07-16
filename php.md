@@ -88,6 +88,11 @@ class VehicleFactory
 </IfModule>
 
 RewriteEngine On
+# force https
+   
+RewriteCond %{HTTPS} !on
+RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 
 RewriteCond %{REQUEST_FILENAME} -d [OR]
 RewriteCond %{REQUEST_FILENAME} -f
