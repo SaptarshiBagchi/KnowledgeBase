@@ -106,3 +106,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ server.php
 </IfModule>
 ```
+
+## Laravel Super charged queries
+
+1. Model::query()
+2. Relationship conditioning
+3. WhereHas
+4. Dynamically generated attributes
+5. WhereMonth
+https://www.youtube.com/watch?v=TuPdEbEBvo0
