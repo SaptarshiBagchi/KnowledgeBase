@@ -115,3 +115,8 @@ RewriteRule ^ server.php
 4. Dynamically generated attributes
 5. WhereMonth
 https://www.youtube.com/watch?v=TuPdEbEBvo0
+
+## Pivot Table and stuff
+This tutorial is extremely handy
+
+https://www.youtube.com/watch?v=V5xINbA-z9o
